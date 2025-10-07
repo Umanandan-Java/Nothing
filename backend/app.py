@@ -1,4 +1,5 @@
 import sqlite3
+import time
 from flask import Flask, jsonify, send_from_directory
 from flask_cors import CORS
 import os
@@ -20,6 +21,7 @@ def get_drafts():
     """
     UPGRADED: Returns a list of all drafts, now including all AI analysis columns.
     """
+   
     conn = get_db_connection()
     # Using SELECT * is the easiest way to include all the new columns
     drafts = conn.execute('SELECT * FROM drafts').fetchall()
@@ -31,6 +33,7 @@ def get_sections_for_draft(draft_id):
     """
     UPGRADED: Returns all sections for a specific draft, including all new AI analysis columns.
     """
+    
     conn = get_db_connection()
     # Using SELECT * to get all columns, including new ones
     sections = conn.execute(
@@ -46,6 +49,7 @@ def get_comments_for_draft(draft_id):
     UPGRADED: Returns all comments for a specific draft, joined with user and section data.
     This is the primary endpoint for the interactive dashboard.
     """
+    
     conn = get_db_connection()
     comments = conn.execute("""
         SELECT 
@@ -74,6 +78,7 @@ def get_draft_details(draft_id):
     RESTORED: Provides a deeply nested JSON object for a single draft,
     including all its sections and their respective comments.
     """
+    
     conn = get_db_connection()
     draft = conn.execute('SELECT * FROM drafts WHERE draft_id = ?', (draft_id,)).fetchone()
     if draft is None: return jsonify({"error": "Draft not found"}), 404
@@ -103,6 +108,7 @@ def serve_wordcloud(subfolder, filename):
     RESTORED: A dedicated route for serving word cloud images, which may be
     cleaner for some frontend paths than using the main /static route.
     """
+    
     # Note: Flask's send_from_directory is relative to the *app root*, not the static folder path.
     # We construct a path to the top-level 'static' directory.
     static_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..','static')
