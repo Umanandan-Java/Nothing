@@ -1,0 +1,11 @@
+user_id,first_name,last_name,email,phone,address,country,state,is_organization,organization_name,industry,created_at
+1,Priya,Sharma,priya.sharma@email.com,9876543210,"Indiranagar, Bangalore",India,Karnataka,0,,,2025-09-22 12:50:49
+2,Vikram,Singh,vikram.singh@law.edu,9876543211,"Model Town, Delhi",India,Delhi,0,,,2025-09-22 12:50:49
+3,Anjali,Desai,anjali.desai.ret@email.com,9876543212,"Malabar Hill, Mumbai",India,Maharashtra,0,,,2025-09-22 12:50:49
+4,Raj,Patel,raj.patel.biz@email.com,9876543213,"Navrangpura, Ahmedabad",India,Gujarat,0,,,2025-09-22 12:50:49
+5,Kabir,Verma,kabir.sarcasm@email.com,9876543214,"Koregaon Park, Pune",India,Maharashtra,0,,,2025-09-22 12:50:49
+6,Rohan,Gupta,rohan.g@innovatenow.com,9876543215,"Hitech City, Hyderabad",India,Telangana,1,InnovateNow Tech Pvt. Ltd.,Technology,2025-09-22 12:50:49
+7,Sunita,Krishnan,sunita.k@veritaslegal.com,9876543216,"Nariman Point, Mumbai",India,Maharashtra,1,Veritas Legal LLP,Finance,2025-09-22 12:50:49
+8,Arjun,Menon,arjun.m@greenfuture.org,9876543217,"Besant Nagar, Chennai",India,Tamil Nadu,1,Green Future Foundation,Non-Profit,2025-09-22 12:50:49
+9,Amitabh,Chaudhary,ac@bigcorp.com,9876543218,"Gurgaon, Haryana",India,Haryana,1,MegaCorp Industries,Finance,2025-09-22 12:50:49
+10,Siddharth,Jain,sid@fintechstart.com,9876543219,"HSR Layout, Bangalore",India,Karnataka,1,Fintech Innovations Ltd,Technology,2025-09-22 12:50:49
